@@ -65,7 +65,7 @@ RUN wget https://github.com/krallin/tini/archive/v0.19.0.tar.gz \
 #     && ln -s /usr/bin/ffmpeg /usr/local/ffmpeg/ffmpeg
 
 # NextCloud
-RUN apt-get update && apt-get install -y nextcloud-desktop
+#RUN apt-get update && apt-get install -y nextcloud-desktop
 
 # Firefox
 RUN apt-get update && apt-get install -y firefox libpci3
@@ -96,6 +96,8 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/cache/apt/* /tmp/a.txt /tmp/b.txt
+#OCTAVE
+RUN apt-get update && apt-get install -y octave
 
 RUN apt-get autoclean -y \
     && apt-get autoremove -y \
